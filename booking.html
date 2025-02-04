@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja Taxi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rezerwacja Taxi</h1>
+    </header>
+
+    <main>
+        <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            
+            <!-- Wybór usługi -->
+            <label for="serviceType">Wybierz usługę:</label>
+            <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Wybierz...</option>
+                <option value="airport">Airport Transfer</option>
+                <option value="vip">VIP Service</option>
+                <option value="tour">Tour Scotland</option>
+            </select>
+
+            <!-- Start i cel podróży -->
+            <div id="locationFields" class="hidden">
+                <label for="startLocation">Miejsce startowe:</label>
+                <input type="text" id="startLocation" name="startLocation" placeholder="Podaj miejsce startowe">
+
+                <label for="destination">Cel podróży:</label>
+                <input type="text" id="destination" name="destination" placeholder="Podaj cel podróży">
+            </div>
+
+            <!-- Wybór VIP Service -->
+            <div id="vipOptions" class="hidden">
+                <label for="vipDuration">Czas trwania VIP Service:</label>
+                <select id="vipDuration" name="vipDuration">
+                    <option value="1h">1 godzina (£75)</option>
+                    <option value="4h">4 godziny (do 50 mil)</option>
+                    <option value="8h">8 godzin (do 100 mil)</option>
+                    <option value="12h">12 godzin (do 150 mil)</option>
+                </select>
+            </div>
+
+            <!-- Wybór Tour Scotland -->
+            <div id="tourOptions" class="hidden">
+                <label for="tourType">Wybierz trasę Tour Scotland:</label>
+                <select id="tourType" name="tourType">
+                    <option value="highlands">Highlands Tour</option>
+                    <option value="whisky">Whisky Tour</option>
+                    <option value="castles">Castles Tour</option>
+                </select>
+            </div>
+
+            <!-- Wybór napoju (dla VIP i Tour) -->
+            <div id="drinkOptions" class="hidden">
+                <label for="drinkChoice">Wybierz napój:</label>
+                <select id="drinkChoice" name="drinkChoice">
+                    <option value="water">Woda</option>
+                    <option value="cola">Coca-Cola</option>
+                    <option value="juice">Sok pomarańczowy</option>
+                    <option value="none">Brak</option>
+                </select>
+            </div>
+
+            <!-- Metoda płatności -->
+            <label for="paymentMethod">Wybierz metodę płatności:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="cash">Gotówka</option>
+                <option value="card">Karta</option>
+                <option value="crypto">Kryptowaluty</option>
+            </select>
+
+            <!-- Przycisk wysyłania -->
+            <button type="submit">Zarezerwuj</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
