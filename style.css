@@ -21,33 +21,6 @@ header h1 {
     font-family: 'Playfair Display', serif;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #1a2a4f; /* Darker Navy Blue */
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #d4af37; /* Gold */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #2a3a6f; /* Lighter Navy Blue */
-    border-radius: 5px;
-}
-
 main {
     padding: 20px;
     max-width: 1200px;
@@ -82,41 +55,13 @@ p {
     background-color: #b99330; /* Darker Gold */
 }
 
-/* Welcome Section */
-.welcome {
-    padding: 100px 20px; /* Większy padding, aby podnieść sekcję */
-    background-color: #0a1f44; /* Navy Blue */
+/* Our Services Section */
+.our-services {
+    padding: 60px 20px;
+    background-color: #1a2a4f; /* Darker Navy Blue */
 }
 
-.welcome h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.welcome p {
-    font-size: 1.2rem;
-}
-
-/* Hero Section (Podstrony) */
-.hero {
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content {
-    background-color: rgba(10, 31, 68, 0.8); /* Navy Blue with opacity */
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.hero h2 {
+.our-services h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
@@ -128,7 +73,7 @@ p {
 }
 
 .service-link {
-    background-color: #1a2a4f; /* Darker Navy Blue */
+    background-color: #0a1f44; /* Navy Blue */
     padding: 20px;
     border-radius: 10px;
     text-decoration: none;
@@ -151,6 +96,34 @@ p {
 .service-link:hover {
     transform: translateY(-10px);
     background-color: #2a3a6f; /* Lighter Navy Blue */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(10, 31, 68, 0.8); /* Navy Blue with opacity */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 /* Book Now Section */
