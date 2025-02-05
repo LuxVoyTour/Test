@@ -82,12 +82,27 @@ p {
     background-color: #b99330; /* Darker Gold */
 }
 
-/* Hero Section */
+/* Welcome Section */
+.welcome {
+    padding: 100px 20px; /* Większy padding, aby podnieść sekcję */
+    background-color: #0a1f44; /* Navy Blue */
+}
+
+.welcome h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+}
+
+/* Hero Section (Podstrony) */
 .hero {
     background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 500px; /* Większa sekcja hero */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,65 +117,56 @@ p {
 }
 
 .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
 }
 
-/* Services Section */
-.services {
-    margin: 60px 0;
-}
-
-.service-cards {
+.service-links {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.card {
+.service-link {
     background-color: #1a2a4f; /* Darker Navy Blue */
     padding: 20px;
     border-radius: 10px;
-    width: 45%; /* Większe karty */
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card i {
-    font-size: 2.5rem;
+    text-decoration: none;
     color: #d4af37; /* Gold */
-    margin-bottom: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.card ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-.card ul li {
+.service-link i {
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #fff;
+}
+
+.service-link span {
+    font-size: 1.2rem;
+}
+
+.service-link:hover {
+    transform: translateY(-10px);
+    background-color: #2a3a6f; /* Lighter Navy Blue */
+}
+
+/* Book Now Section */
+.book-now {
+    padding: 60px 20px;
+    background-color: #1a2a4f; /* Darker Navy Blue */
+}
+
+.book-now h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.book-now p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 /* Footer */
