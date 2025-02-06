@@ -242,88 +242,75 @@ th, td {
     padding: 12px;
     border: 1px solid #ccc;
     text-align: left;
-    font-size: 0.9rem;
-    
-    
-    /* Booking Form Styles */
-.booking-form {
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.additional-info {
+    text-align: left;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.booking-form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
+.additional-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group select {
-    appearance: none;
-    background-color: #fff;
-}
-
-.form-group button {
-    width: 100%;
-    padding: 12px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-group button:hover {
-    background-color: #333333;
-}
-
-.hidden {
-    display: none;
+.additional-info li {
+    margin-bottom: 10px;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-    .booking-form {
-        padding: 15px;
+    header h1 {
+        font-size: 1.5rem; /* Zmniejszono z 2rem */
     }
 
-    .booking-form h2 {
-        font-size: 1.5rem;
+    nav ul li a {
+        font-size: 0.9rem; /* Zmniejszono z 1rem */
     }
 
-    .form-group label {
-        font-size: 0.9rem;
+    .hero {
+        height: 250px; /* Zmniejszono z 300px */
     }
 
-    .form-group input, .form-group select, .form-group textarea {
-        font-size: 0.9rem;
+    .hero h2 {
+        font-size: 1.2rem; /* Zmniejszono z 1.5rem */
     }
 
-    .form-group button {
-        font-size: 0.9rem;
+    .hero p {
+        font-size: 0.8rem; /* Zmniejszono z 0.9rem */
+    }
+
+    .card {
+        width: 100%; /* Karty zajmują całą szerokość na mniejszych ekranach */
+        margin: 10px 0;
+    }
+
+    .card h3 {
+        font-size: 1rem; /* Zmniejszono z 1.2rem */
+    }
+
+    .card p {
+        font-size: 0.8rem; /* Zmniejszono z 0.9rem */
+    }
+
+    .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: 0.8rem; /* Zmniejszono z 0.9rem */
+    }
+
+    th, td {
+        font-size: 0.8rem; /* Zmniejszono z 0.9rem */
+    }
+
+    .additional-info li {
+        font-size: 0.8rem; /* Zmniejszono z 0.9rem */
     }
 }

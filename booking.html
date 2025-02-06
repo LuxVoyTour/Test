@@ -69,17 +69,17 @@
                     </select>
                 </div>
 
-                <!-- Location Fields (for VIP and Airport Transfer) -->
-                <div id="locationFields" class="form-group hidden">
+                <!-- Location Fields (for all services) -->
+                <div id="locationFields" class="form-group">
                     <label for="startLocation">Pickup Location:</label>
-                    <input type="text" id="startLocation" name="startLocation" placeholder="Enter pickup location">
+                    <input type="text" id="startLocation" name="startLocation" placeholder="Enter pickup location" required>
 
                     <label for="destination">Destination:</label>
-                    <input type="text" id="destination" name="destination" placeholder="Enter destination">
+                    <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
                 </div>
 
-                <!-- Date and Time Fields (for VIP and Airport Transfer) -->
-                <div id="dateTimeFields" class="form-group hidden">
+                <!-- Date and Time Fields (for all services) -->
+                <div id="dateTimeFields" class="form-group">
                     <label for="date">Date:</label>
                     <input type="date" id="date" name="date" required>
 
@@ -98,14 +98,17 @@
                     </select>
                 </div>
 
-                <!-- Drink Selection (for VIP) -->
-                <div id="drinkOptions" class="form-group hidden">
-                    <label for="drinkChoice">Select Beverage:</label>
-                    <select id="drinkChoice" name="drinkChoice">
-                        <option value="water">Water</option>
-                        <option value="cola">Coca-Cola</option>
-                        <option value="juice">Orange Juice</option>
-                        <option value="none">None</option>
+                <!-- Golf Day Options -->
+                <div id="golfOptions" class="form-group hidden">
+                    <label for="golfCourse">Select Golf Course:</label>
+                    <select id="golfCourse" name="golfCourse">
+                        <option value="st-andrews">St Andrews Links (Old Course)</option>
+                        <option value="royal-dornoch">Royal Dornoch Golf Club</option>
+                        <option value="muirfield">Muirfield</option>
+                        <option value="carnoustie">Carnoustie Golf Links</option>
+                        <option value="royal-troon">Royal Troon Golf Club</option>
+                        <option value="turnberry">Turnberry (Ailsa Course)</option>
+                        <option value="kingsbarns">Kingsbarns Golf Links</option>
                     </select>
                 </div>
 
@@ -137,6 +140,24 @@
         <p>Contact us: <a href="mailto:luxvoytour@gmail.com">luxvoytour@gmail.com</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dynamiczne pokazywanie/ukrywanie pól w zależności od wybranej usługi
+        document.getElementById('serviceType').addEventListener('change', function() {
+            const serviceType = this.value;
+            const vipOptions = document.getElementById('vipOptions');
+            const golfOptions = document.getElementById('golfOptions');
+
+            // Ukryj wszystkie opcje
+            vipOptions.classList.add('hidden');
+            golfOptions.classList.add('hidden');
+
+            // Pokaż odpowiednie opcje
+            if (serviceType === 'vip') {
+                vipOptions.classList.remove('hidden');
+            } else if (serviceType === 'golf') {
+                golfOptions.classList.remove('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
