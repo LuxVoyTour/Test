@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - LuxVoyTour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LuxVoyTour</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="golf-day.html">Golf Day</a></li>
+                <li><a href="attraction.html">Attraction</a></li>
+                <li><a href="distilleries.html">Distilleries</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Book Your Service</h2>
+        <form id="bookingForm" action="https://formspree.io/f/xrbepyek" method="POST">
+            <!-- Personal Details -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <!-- Service Selection -->
+            <label for="serviceType">Select Service:</label>
+            <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Choose...</option>
+                <option value="airport">Airport Transfer</option>
+                <option value="vip">VIP Service</option>
+                <option value="golf">Golf Day</option>
+                <option value="hotel">Hotels</option>
+                <option value="attraction">Attraction</option>
+                <option value="distillery">Distilleries</option>
+            </select>
+
+            <!-- Location Fields (for VIP and Airport Transfer) -->
+            <div id="locationFields" class="hidden">
+                <label for="startLocation">Pickup Location:</label>
+                <input type="text" id="startLocation" name="startLocation" placeholder="Enter pickup location">
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination">
+            </div>
+
+            <!-- Date and Time Fields (for VIP and Airport Transfer) -->
+            <div id="dateTimeFields" class="hidden">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <!-- VIP Service Options -->
+            <div id="vipOptions" class="hidden">
+                <label for="vipDuration">Select VIP Service Duration:</label>
+                <select id="vipDuration" name="vipDuration">
+                    <option value="1h">1 Hour (£75)</option>
+                    <option value="4h">4 Hours (up to 50 miles)</option>
+                    <option value="8h">8 Hours (up to 100 miles)</option>
+                    <option value="12h">12 Hours (up to 150 miles)</option>
+                </select>
+            </div>
+
+            <!-- Drink Selection (for VIP) -->
+            <div id="drinkOptions" class="hidden">
+                <label for="drinkChoice">Select Beverage:</label>
+                <select id="drinkChoice" name="drinkChoice">
+                    <option value="water">Water</option>
+                    <option value="cola">Coca-Cola</option>
+                    <option value="juice">Orange Juice</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+            <!-- Payment Method -->
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+                <option value="crypto">Crypto</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Book Now</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
