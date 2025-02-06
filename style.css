@@ -17,7 +17,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Zmniejszono z 2.5rem */
     font-family: 'Playfair Display', serif;
 }
 
@@ -38,7 +38,7 @@ nav ul li a {
     color: #ffffff; /* White */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Zmniejszono z 1.1rem */
 }
 
 nav ul li a:hover {
@@ -53,7 +53,7 @@ main {
 
 h2 {
     color: #000000; /* Black */
-    font-size: 2rem;
+    font-size: 1.5rem; /* Zmniejszono z 2rem */
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
 }
@@ -61,6 +61,7 @@ h2 {
 p {
     line-height: 1.6;
     color: #333333; /* Dark Gray */
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 .cta-button {
@@ -73,6 +74,7 @@ p {
     display: inline-block;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 .cta-button:hover {
@@ -84,7 +86,7 @@ p {
     background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 300px; /* Zmniejszono z 400px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,22 +96,22 @@ p {
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
-    padding: 40px;
+    padding: 20px; /* Zmniejszono z 40px */
     border-radius: 10px;
 }
 
 .hero h2 {
-    font-size: 2rem; /* Zmniejszono z 2.5rem */
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Zmniejszono z 2rem */
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1rem; /* Zmniejszono z 1.2rem */
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 /* Our Services Section */
 .our-services {
-    padding: 60px 20px;
+    padding: 40px 20px; /* Zmniejszono z 60px */
     background-color: #f9f9f9; /* Light Gray */
 }
 
@@ -121,10 +123,10 @@ p {
 
 .card {
     background-color: #ffffff; /* White */
-    padding: 20px;
+    padding: 15px; /* Zmniejszono z 20px */
     border-radius: 10px;
-    width: 30%;
-    margin: 10px;
+    width: 100%; /* Zmieniono z 30% na 100% dla lepszej responsywności */
+    margin: 10px 0; /* Zmieniono z 10px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-decoration: none;
@@ -136,30 +138,30 @@ p {
 }
 
 .card i {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2rem; /* Zmniejszono z 2.5rem */
+    margin-bottom: 10px;
     color: #000000; /* Black */
 }
 
 .card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem; /* Zmniejszono z 1.8rem */
+    margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
+    margin-bottom: 10px;
 }
 
 /* About Us Section */
 .about-us {
-    padding: 60px 20px;
+    padding: 40px 20px; /* Zmniejszono z 60px */
     background-color: #ffffff; /* White */
 }
 
 /* Book Now Section */
 .book-now {
-    padding: 60px 20px;
+    padding: 40px 20px; /* Zmniejszono z 60px */
     background-color: #f9f9f9; /* Light Gray */
 }
 
@@ -173,7 +175,7 @@ footer {
 .social-media a {
     color: #ffffff; /* White */
     margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Zmniejszono z 1.5rem */
     transition: color 0.3s ease;
 }
 
@@ -193,6 +195,7 @@ footer {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 .contact-form input, .contact-form textarea {
@@ -201,6 +204,7 @@ footer {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 .contact-form textarea {
@@ -215,6 +219,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 0.9rem; /* Zmniejszono z 1rem */
 }
 
 .contact-form button:hover {
@@ -237,25 +242,4 @@ th, td {
     padding: 12px;
     border: 1px solid #ccc;
     text-align: left;
-}
-
-th {
-    background-color: #f9f9f9;
-    font-weight: bold;
-}
-
-.additional-info {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.additional-info ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.additional-info li {
-    margin-bottom: 10px;
-}
+    font-size: 0.9rem;
