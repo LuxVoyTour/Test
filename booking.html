@@ -3,135 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking - LuxVoyTour</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="scripts.js"></script>
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>LuxVoyTour</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotels.html">Hotels</a></li>
-                <li><a href="golf-day.html">Golf Day</a></li>
-                <li><a href="attraction.html">Attraction</a></li>
-                <li><a href="distilleries.html">Distilleries</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <h2>Booking Form</h2>
+        <form id="booking-form" action="https://formspree.io/f/xrbepyek" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-    <main>
-        <section class="booking-form">
-            <h2>Book Your Service</h2>
-            <form id="bookingForm" action="https://formspree.io/f/xrbepyek" method="POST">
-                <!-- Dane kontaktowe -->
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="surname">Surname:</label>
-                    <input type="text" id="surname" name="surname" required>
-                </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+            <div class="form-group">
+                <label for="number">Number of Passengers:</label>
+                <input type="number" id="number" name="number" required>
+            </div>
 
-                <!-- Wybór usługi -->
-                <div class="form-group">
-                    <label for="service">Select Service:</label>
-                    <select id="service" name="service" required>
-                        <option value="">-- Select an option --</option>
-                        <option value="airport-transfer">Airport Transfer</option>
-                        <option value="golf-day">Golf Day</option>
-                        <option value="vip-service">VIP Service</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select Service --</option>
+                    <option value="airport-transfer">Airport Transfer</option>
+                    <option value="golf-day">Golf Day</option>
+                    <option value="vip-service">VIP Service</option>
+                </select>
+            </div>
 
-                <!-- Sekcje specyficzne dla usług (ukryte na start) -->
-                <div id="additional-fields" class="hidden">
-                    <div id="airport-transfer-fields" class="hidden">
-                        <div class="form-group">
-                            <label for="airport-pickup">Pick Up:</label>
-                            <input type="text" id="airport-pickup" name="airport-pickup">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="airport-destination">Destination:</label>
-                            <input type="text" id="airport-destination" name="airport-destination">
-                        </div>
-                    </div>
-
-                    <div id="golf-day-fields" class="hidden">
-                        <div class="form-group">
-                            <label for="golf-pickup">Pick Up:</label>
-                            <input type="text" id="golf-pickup" name="golf-pickup">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="golf-course">Select Golf Course:</label>
-                            <input type="text" id="golf-course" name="golf-course">
-                        </div>
-                    </div>
-
-                    <div id="vip-service-fields" class="hidden">
-                        <div class="form-group">
-                            <label for="vip-pickup">Pick Up:</label>
-                            <input type="text" id="vip-pickup" name="vip-pickup">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="vip-destination">Destination:</label>
-                            <input type="text" id="vip-destination" name="vip-destination">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="vip-option">Select VIP Service:</label>
-                            <select id="vip-option" name="vip-option">
-                                <option value="hourly">Hourly VIP Service</option>
-                                <option value="half-day">Half Day Rate</option>
-                                <option value="full-day">Full Day Rate</option>
-                                <option value="extended-day">Extended Day Rate</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Uniwersalne pola (widoczne dla każdej usługi) -->
+            <div id="additional-fields" class="hidden">
+                <!-- Airport Transfer Fields -->
+                <div id="airport-transfer-fields" class="hidden">
                     <div class="form-group">
-                        <label for="date">Date:</label>
-                        <input type="date" id="date" name="date" required>
+                        <label for="airport-pickup">Pick Up:</label>
+                        <input type="text" id="airport-pickup" name="airport-pickup">
                     </div>
-
                     <div class="form-group">
-                        <label for="time">Time:</label>
-                        <input type="time" id="time" name="time" required>
+                        <label for="airport-destination">Destination:</label>
+                        <input type="text" id="airport-destination" name="airport-destination">
                     </div>
-
                     <div class="form-group">
-                        <label for="payment">Pay Method:</label>
-                        <select id="payment" name="payment" required>
-                            <option value="credit-card">Credit Card</option>
-                            <option value="paypal">PayPal</option>
-                            <option value="bank-transfer">Bank Transfer</option>
-                            <option value="cash">Cash</option>
+                        <label for="airport-date">Date:</label>
+                        <input type="date" id="airport-date" name="airport-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="airport-time">Time:</label>
+                        <input type="time" id="airport-time" name="airport-time">
+                    </div>
+                </div>
+
+                <!-- Golf Day Fields -->
+                <div id="golf-day-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="golf-pickup">Pick Up:</label>
+                        <input type="text" id="golf-pickup" name="golf-pickup">
+                    </div>
+                    <div class="form-group">
+                        <label for="golf-course">Select Golf Course:</label>
+                        <select id="golf-course" name="golf-course">
+                            <option value="">Loading courses...</option>
                         </select>
                     </div>
-
-                    <button type="submit">Book Now</button>
+                    <div class="form-group">
+                        <label for="golf-date">Date:</label>
+                        <input type="date" id="golf-date" name="golf-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="golf-time">Time:</label>
+                        <input type="time" id="golf-time" name="golf-time">
+                    </div>
                 </div>
-            </form>
-        </section>
-    </main>
+
+                <!-- VIP Service Fields -->
+                <div id="vip-service-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="vip-pickup">Pick Up:</label>
+                        <input type="text" id="vip-pickup" name="vip-pickup">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip-destination">Destination:</label>
+                        <input type="text" id="vip-destination" name="vip-destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip-date">Date:</label>
+                        <input type="date" id="vip-date" name="vip-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip-time">Time:</label>
+                        <input type="time" id="vip-time" name="vip-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="vip-option">Select VIP Service:</label>
+                        <select id="vip-option" name="vip-option">
+                            <option value="">Loading VIP services...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
