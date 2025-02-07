@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking - LuxVoyTour</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://luxvoytour.co.uk/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,13 +13,13 @@
         <h1>LuxVoyTour</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotels.html">Hotels</a></li>
-                <li><a href="golf-day.html">Golf Day</a></li>
-                <li><a href="attraction.html">Attraction</a></li>
-                <li><a href="distilleries.html">Distilleries</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="https://luxvoytour.co.uk">Home</a></li>
+                <li><a href="https://luxvoytour.co.uk/hotels.html">Hotels</a></li>
+                <li><a href="https://luxvoytour.co.uk/golf-day.html">Golf Day</a></li>
+                <li><a href="https://luxvoytour.co.uk/attraction.html">Attraction</a></li>
+                <li><a href="https://luxvoytour.co.uk/distilleries.html">Distilleries</a></li>
+                <li><a href="https://luxvoytour.co.uk/booking.html">Booking</a></li>
+                <li><a href="https://luxvoytour.co.uk/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -69,57 +69,121 @@
                     </select>
                 </div>
 
-                <!-- Location Fields (for all services) -->
-                <div id="locationFields" class="form-group">
-                    <label for="startLocation">Pickup Location:</label>
-                    <input type="text" id="startLocation" name="startLocation" placeholder="Enter pickup location" required>
+                <!-- Airport Transfer Fields -->
+                <div id="airportFields" class="form-group hidden">
+                    <h3>Airport Transfer Details</h3>
+                    <div class="form-group">
+                        <label for="airportPickup">Pickup Location:</label>
+                        <input type="text" id="airportPickup" name="airportPickup" placeholder="Enter pickup location" required>
+                    </div>
 
-                    <label for="destination">Destination:</label>
-                    <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+                    <div class="form-group">
+                        <label for="airportDestination">Destination:</label>
+                        <input type="text" id="airportDestination" name="airportDestination" placeholder="Enter destination" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airportDate">Date:</label>
+                        <input type="date" id="airportDate" name="airportDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airportTime">Time:</label>
+                        <input type="time" id="airportTime" name="airportTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airportPayment">Payment Method:</label>
+                        <select id="airportPayment" name="airportPayment" required>
+                            <option value="cash">Cash</option>
+                            <option value="card">Card</option>
+                            <option value="crypto">Crypto</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- Date and Time Fields (for all services) -->
-                <div id="dateTimeFields" class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
+                <!-- VIP Service Fields -->
+                <div id="vipFields" class="form-group hidden">
+                    <h3>VIP Service Details</h3>
+                    <div class="form-group">
+                        <label for="vipPickup">Pickup Location:</label>
+                        <input type="text" id="vipPickup" name="vipPickup" placeholder="Enter pickup location" required>
+                    </div>
 
-                    <label for="time">Time:</label>
-                    <input type="time" id="time" name="time" required>
+                    <div class="form-group">
+                        <label for="vipDestination">Destination:</label>
+                        <input type="text" id="vipDestination" name="vipDestination" placeholder="Enter destination" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vipDate">Date:</label>
+                        <input type="date" id="vipDate" name="vipDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vipTime">Time:</label>
+                        <input type="time" id="vipTime" name="vipTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vipDuration">Select VIP Service Duration:</label>
+                        <select id="vipDuration" name="vipDuration" required>
+                            <option value="1h">1 Hour (£75)</option>
+                            <option value="4h">4 Hours (up to 50 miles)</option>
+                            <option value="8h">8 Hours (up to 100 miles)</option>
+                            <option value="12h">12 Hours (up to 150 miles)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vipPayment">Payment Method:</label>
+                        <select id="vipPayment" name="vipPayment" required>
+                            <option value="cash">Cash</option>
+                            <option value="card">Card</option>
+                            <option value="crypto">Crypto</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- VIP Service Options -->
-                <div id="vipOptions" class="form-group hidden">
-                    <label for="vipDuration">Select VIP Service Duration:</label>
-                    <select id="vipDuration" name="vipDuration">
-                        <option value="1h">1 Hour (£75)</option>
-                        <option value="4h">4 Hours (up to 50 miles)</option>
-                        <option value="8h">8 Hours (up to 100 miles)</option>
-                        <option value="12h">12 Hours (up to 150 miles)</option>
-                    </select>
-                </div>
+                <!-- Golf Day Fields -->
+                <div id="golfFields" class="form-group hidden">
+                    <h3>Golf Day Details</h3>
+                    <div class="form-group">
+                        <label for="golfPickup">Pickup Location:</label>
+                        <input type="text" id="golfPickup" name="golfPickup" placeholder="Enter pickup location" required>
+                    </div>
 
-                <!-- Golf Day Options -->
-                <div id="golfOptions" class="form-group hidden">
-                    <label for="golfCourse">Select Golf Course:</label>
-                    <select id="golfCourse" name="golfCourse">
-                        <option value="st-andrews">St Andrews Links (Old Course)</option>
-                        <option value="royal-dornoch">Royal Dornoch Golf Club</option>
-                        <option value="muirfield">Muirfield</option>
-                        <option value="carnoustie">Carnoustie Golf Links</option>
-                        <option value="royal-troon">Royal Troon Golf Club</option>
-                        <option value="turnberry">Turnberry (Ailsa Course)</option>
-                        <option value="kingsbarns">Kingsbarns Golf Links</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for="golfCourse">Select Golf Course:</label>
+                        <select id="golfCourse" name="golfCourse" required>
+                            <option value="st-andrews">St Andrews Links (Old Course)</option>
+                            <option value="royal-dornoch">Royal Dornoch Golf Club</option>
+                            <option value="muirfield">Muirfield</option>
+                            <option value="carnoustie">Carnoustie Golf Links</option>
+                            <option value="royal-troon">Royal Troon Golf Club</option>
+                            <option value="turnberry">Turnberry (Ailsa Course)</option>
+                            <option value="kingsbarns">Kingsbarns Golf Links</option>
+                        </select>
+                    </div>
 
-                <!-- Payment Method -->
-                <div class="form-group">
-                    <label for="paymentMethod">Select Payment Method:</label>
-                    <select id="paymentMethod" name="paymentMethod" required>
-                        <option value="cash">Cash</option>
-                        <option value="card">Card</option>
-                        <option value="crypto">Crypto</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="golfDate">Date:</label>
+                        <input type="date" id="golfDate" name="golfDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="golfTime">Time:</label>
+                        <input type="time" id="golfTime" name="golfTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="golfPayment">Payment Method:</label>
+                        <select id="golfPayment" name="golfPayment" required>
+                            <option value="cash">Cash</option>
+                            <option value="card">Card</option>
+                            <option value="crypto">Crypto</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- Submit Button -->
@@ -140,24 +204,6 @@
         <p>Contact us: <a href="mailto:luxvoytour@gmail.com">luxvoytour@gmail.com</a></p>
     </footer>
 
-    <script>
-        // Dynamiczne pokazywanie/ukrywanie pól w zależności od wybranej usługi
-        document.getElementById('serviceType').addEventListener('change', function() {
-            const serviceType = this.value;
-            const vipOptions = document.getElementById('vipOptions');
-            const golfOptions = document.getElementById('golfOptions');
-
-            // Ukryj wszystkie opcje
-            vipOptions.classList.add('hidden');
-            golfOptions.classList.add('hidden');
-
-            // Pokaż odpowiednie opcje
-            if (serviceType === 'vip') {
-                vipOptions.classList.remove('hidden');
-            } else if (serviceType === 'golf') {
-                golfOptions.classList.remove('hidden');
-            }
-        });
-    </script>
+    <script src="https://luxvoytour.co.uk/scripts.js"></script>
 </body>
 </html>
