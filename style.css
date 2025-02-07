@@ -396,4 +396,85 @@ th {
     .form-group button {
         font-size: 0.9rem;
     }
+}/* Booking Form Styles */
+.booking-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group select {
+    appearance: none;
+    background-color: #fff;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #333333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .booking-form {
+        padding: 15px;
+    }
+
+    .booking-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-group button {
+        font-size: 0.9rem;
+    }
 }
