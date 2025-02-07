@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     serviceSelect.addEventListener("change", function () {
         const selectedService = serviceSelect.value;
-        dynamicFields.innerHTML = "";
+        dynamicFields.innerHTML = ""; // Clear previous content
 
         if (selectedService === "airport-transfer") {
             dynamicFields.innerHTML = `
@@ -34,9 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <label for="golf-course">Select Golf Course:</label>
                 <select id="golf-course" name="golf-course" required>
-                    <option value="St. Andrews">St. Andrews</option>
+                    <option value="St Andrews Links (Old Course)">St Andrews Links (Old Course)</option>
+                    <option value="Royal Dornoch Golf Club">Royal Dornoch Golf Club</option>
                     <option value="Muirfield">Muirfield</option>
-                    <option value="Gleneagles">Gleneagles</option>
+                    <option value="Carnoustie Golf Links">Carnoustie Golf Links</option>
+                    <option value="Royal Troon Golf Club">Royal Troon Golf Club</option>
+                    <option value="Turnberry (Ailsa Course)">Turnberry (Ailsa Course)</option>
+                    <option value="Kingsbarns Golf Links">Kingsbarns Golf Links</option>
                 </select>
 
                 <label for="date">Date:</label>
